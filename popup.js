@@ -14,10 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "fontname": font_name,
                 "csspath": css_path
             }
-
-            chrome.tabs.sendMessage(currTab.id, font_msg, function(res) {
-                alert(res);
-            });
+            chrome.tabs.sendMessage(currTab.id, font_msg, null);
         }, false);
     });
 });
